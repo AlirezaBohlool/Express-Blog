@@ -1,0 +1,50 @@
+{{>header}}
+<section class="section-gap section-top pb-0 bg-white text-center">
+    <!--<div class="hero-img bg-overlay" data-overlay="1" style="background-image: url(/static/assets/img/price-banner.jpg);"></div>-->
+    <div class="container">
+        <div class="row justify-content-md-center align-items-center">
+            <div class="col-md-7">
+                <!-- heading -->
+                <h2 class="">
+                    وبلاگ و مقاله
+                </h2>
+                <p class="lead text-muted">لورم ایپسوم متن ساختگی با تولید چاپ و با استفاده از طراحان گرافیک است.</p>
+            </div>
+            <div class="col-md-8">
+                <img src="/static/assets/img/blog/blog-banner.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section-gap">
+    <div class="container">
+        <div class="row justify-content-between">
+            {{> saidbar this}}
+            <div class="col-lg-8">
+              {{#each post}}
+  <div class="blog-post">
+    <a href="#"><img
+        class="rounded mb-lg-5 mb-4"
+        src="/static/assets/img/blog/b1.jpg"
+        alt="card image"
+      /></a>
+    <h3 class=""><a href="/p/{{this.slug}}">{{this.title}}</a></h3>
+    <div class="meta font-lora my-4">
+      <a href="#">{{this.ful_name}}</a>
+      <span class="meta-separator"></span>
+      <a href="#">{{this.jalaliDate}}</a>
+    </div>
+    <p>{{this.expert}}</p>
+  </div>
+{{/each}}
+<div class="pagination justify-content-center mb-4">
+  <a href="/?page={{pagination.perPage}}" class="btn btn-dark {{#isDisabled pagination.hasPrePage}}{{/isDisabled}}"><i class="fa fa-angle-left"></i></a>
+  <div class="h6 mt-2 mx-4">
+    {{pagination.page}} از {{pagination.totalPage}}
+  </div>
+  <a href="/?page={{pagination.nextPage}}" class="btn btn-dark {{#isDisabled pagination.hasNextPage}}{{/isDisabled}}"><i class="fa fa-angle-right"></i></a>
+</div>
+</div>
+</div>
+</div>
+</section>

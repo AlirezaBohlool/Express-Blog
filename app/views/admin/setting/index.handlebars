@@ -1,0 +1,74 @@
+<!--Horizontal Form Start-->
+<div class="content-body">
+  <div class="col-lg-6 col-12 mb-30">
+    <div class="box">
+      <div class="box-head">
+        <h4 class="title">فرم افقی</h4>
+      </div>
+      <div class="box-body">
+        <form action="/admin/setting/register" method="post"> 
+          <div class="row mbn-20">
+
+            <div class="col-12 mb-20">
+              <div class="row mbn-10">
+                <div class="col-sm-3 col-12 mb-10"><label
+                    for="formLayoutUsername2"
+                  > عنوان سایت</label></div>
+                <div class="col-sm-9 col-12 mb-10"><input
+                    type="text"
+                    id="formLayoutUsername2"
+                    class="form-control"
+                    placeholder="عنوان سایت"
+                    name="title_web_sit"
+                    value="{{optimizeSetting.title_web_sit}}"
+                  /></div>
+              </div>
+            </div>
+            <div class="col-12 mb-20">
+              <div class="row mbn-10">
+                <div class="col-sm-3 col-12 mb-10"><label
+                    for="formLayoutEmail2"
+                  > محتوا</label></div>
+                <div class="col-sm-9 col-12 mb-10"><input
+                    type="number"
+                    id="formLayoutEmail2"
+                    class="form-control"
+                    placeholder="محتوا"
+                    name="content_web_sit"
+                    value="{{optimizeSetting.content_web_sit}}"
+                  /></div>
+              </div>
+            </div>
+            <div class="col-12 mb-20">
+              <div class="row mbn-10">
+                <div class="col-sm-3 col-12 mb-10"><label
+                    for="formLayoutPassword2"
+                  > توضیحات</label></div>
+                <div class="col-sm-9 col-12 mb-10"><input
+                    type="text"
+                    id="formLayoutPassword2"
+                    class="form-control"
+                    placeholder="توضیحات"
+                    name="discription"
+                    value="{{optimizeSetting.discription}}"
+                  /></div>
+              </div>
+            </div>
+
+            <div class="col-12 mb-20"><label class="adomx-checkbox"><input name="everybody_register" type="checkbox" {{#isChecked optimizeSetting.everybody_register}}checked{{/isChecked}}/><i class="icon"></i> هرکس میتواند ثبت نام کند</label></div>
+            <div class="col-12 mb-20"><label class="adomx-checkbox"><input name="evrybody_register_comment" type="checkbox" {{#isChecked optimizeSetting.everybody_register_comment}}checked{{/isChecked}}/><i class="icon"></i> هرکس میتوانددیدگاه ثبت کند</label></div>
+
+            <div class="col-12 mb-20">
+              <input
+                type="submit"
+                value="ثبت"
+                class="button button-primary"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Horizontal Form End-->

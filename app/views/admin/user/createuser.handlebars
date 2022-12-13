@@ -1,0 +1,76 @@
+ <!-- Content Body Start -->
+        <div class="content-body">
+
+            <!-- Page Headings Start -->
+            <div class="row justify-content-between align-items-center mb-10">
+
+                <!-- Page Heading Start -->
+                <div class="col-12 col-lg-auto mb-20">
+                    <div class="page-heading">
+                        <h3> ایجاد کاربر جدید</h3>
+                    </div>
+                </div><!-- Page Heading End -->
+
+                <!-- Page Button Group Start -->
+                {{!-- <div class="col-12 col-lg-auto mb-20">
+                    <div class="buttons-group">
+                        <a href="/admin/create/store"><button class="button button-outline button-primary">ذخیره و انتشار</button></a>
+                        <button class="button button-outline button-info">ذخیره پیش نویس</button>
+                    </div>
+                </div><!-- Page Button Group End --> --}}
+
+            </div><!-- Page Headings End -->
+
+            <!-- Add or Edit Product Start -->
+            <div class="add-edit-product-wrap col-12">
+
+                <div class="add-edit-product-form">
+                    <form action="/admin/users/store" method="post">
+                    <h3> ایجادکاربر جدید</h3>
+                        {{#if errors}}
+                        {{#each errors}}
+                        <div class="alert alert-danger" role="alert">
+                        <p>{{this}}<p>
+                        </div>
+                        {{/each}}
+                        {{/if}}
+                        {{!-- <div class="alert alert-danger" role="alert">
+                                نمونه یک <a class="alert-link" href="#">خطر</a> هشدار آن را چک کنید
+                            </div> --}}
+
+                        <div class="row">
+                            <div class="col-12 mb-15"><input class="form-control" type="text" name="ful_name" placeholder="نام و نام خانوادگی"></div>
+                            <div class="col-12 mb-15"><input class="form-control" type="password" name="password" placeholder="کلمه عبور"></div>
+                            <div class="col-12 mb-15"><input class="form-control" type="email" name="email" placeholder=" ایمیل"></div>
+
+                            <div class=" col-12 mb-30">
+                        <div class="col-12  mb-15">
+                                <h5> پست</h5>
+                        </div>
+                    
+                                <div class="col-12  mb-15">
+                            <label for=""><input type="checkbox" name="role" value="0"> نویسنده</label>
+                            <label for=""><input type="checkbox" name="role" value="1"> ادمین</label>
+                            <label for=""><input type="checkbox" name="role" value="2"> مدیر</label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-auto mb-20">
+                      </div><!-- Page Button Group End -->
+
+                        <div class="col-12  mb-15">
+                        <div class="buttons-group">
+                            <div class="col-12  mb-15">
+                        <button type="submit" class="button button-outline button-primary">ذخیره و انتشار</button>
+                        <button class="button button-outline button-info">ذخیره پیش نویس</button>
+                            
+                        </div>
+                        </div>
+                        </div><!-- Page Button Group End -->                      
+                        </form>
+                     </div>
+
+        
+
+            </div><!-- Add or Edit Product End -->
+
+        </div><!-- Content Body End -->

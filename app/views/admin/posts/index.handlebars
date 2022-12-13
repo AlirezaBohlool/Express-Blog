@@ -1,0 +1,61 @@
+<div class="content-body">
+
+            <!-- Page Headings Start -->
+            <div class="row justify-content-between align-items-center mb-10">
+
+                <!-- Page Heading Start -->
+                <div class="col-12 col-lg-auto mb-20">
+                    <div class="page-heading">
+                        <h3>مطالب</h3>
+                    </div>
+                </div><!-- Page Heading End -->
+
+            </div><!-- Page Headings End -->
+
+            <div class="row">
+
+                <!--Manage Product List Start-->
+                <div class="col-12">
+                    <!-- Page Button Group Start -->
+                <div class="col-12 col-lg-auto mb-20">
+                    <div class="buttons-group">
+                        <a href="/admin/posts/create"><button class="button button-outline button-primary">ایجادمطلب جدید</button></a>
+                    </div>
+                </div><!-- Page Button Group End -->
+
+                    <div class="table-responsive">
+                        <table class="table table-vertical-middle">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>عنوان</th>
+                                    <th>نویسنده</th>
+                                    <th>تاریخ انتشار</th>
+                                    <th>تعدادبازدید</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each post}}          
+                                <tr>
+                                    <td>{{this.id}}</td>
+                                    <td>{{this.title}}</td>
+                                    <td><a href="#">{{this.ful_name}}</a></td>
+                                    <td>{{this.created_at_persion}}</td>
+                                    <td>{{this.langnumber}}</td>
+                                    <td>
+                                        <div class="table-action-buttons">
+                                            <a class="edit button button-box button-xs button-info" href="/admin/posts/edit/{{this.id}}"><i class="zmdi zmdi-edit"></i></a>
+                                            <a class="delete button button-box button-xs button-danger" href="/admin/posts/delet/{{this.id}}"><i class="zmdi zmdi-delete"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--Manage Product List End-->
+
+            </div>
+
+        </div>
