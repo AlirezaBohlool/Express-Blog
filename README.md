@@ -13,5 +13,9 @@
 ## Project capabilities:
 this project has an admin pane that, for example, management, comments, posts, and users, ... and with different categories (recently,food,sport,...)
 
-## 🚀 Techno!
-nodejs,express,redis,mysql,handlebars,bootstrap,
+## 🚀 Techno 
+<p >
+  <a href="#" >
+    <img src="https://skillicons.dev/icons?i=,,,,,javascript,mysql,redis,express,nodejs,html,css,bootstrap" />
+  </a>
+</p>
